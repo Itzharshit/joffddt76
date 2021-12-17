@@ -11,9 +11,9 @@ from handlers.helpers import str_to_b64
 async def reply_forward(message: Message, file_id: int):
     try:
         await message.reply_text(
-            f"**You can use this link to share your Files:**\n"
+            f"**Here is the Permanent Link of your file:**\n"
             f"https://telegram.me/{Config.BOT_USERNAME}?start=pyrogrammers_{str_to_b64(str(file_id))}\n\n"
-            f"__To get the File, open the link__",
+            f"Just Click the link to get your file!",
             disable_web_page_preview=True, quote=True)
     except FloodWait as e:
         await asyncio.sleep(e.x)
