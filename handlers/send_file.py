@@ -12,7 +12,7 @@ async def reply_forward(message: Message, file_id: int):
     try:
         await message.reply_text(
             f"**You can use this link to share your Files:**\n"
-            f"https://t.me/{Config.BOT_USERNAME}?start=pyrogrammers_{str_to_b64(str(file_id))}\n\n"
+            f"https://telegram.me/{Config.BOT_USERNAME}?start=pyrogrammers_{str_to_b64(str(file_id))}\n\n"
             f"__To get the File, open the link__",
             disable_web_page_preview=True, quote=True)
     except FloodWait as e:
