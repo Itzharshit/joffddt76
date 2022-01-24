@@ -56,7 +56,7 @@ async def save_batch_media_in_channel(bot: Client, editable: Message, message_id
             f"Tap on the link to copy it!",
             parse_mode="Markdown",
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton("Open Link", url=share_link)],
+                [[InlineKeyboardButton("Open Link", url=share_link)]
             ),
             disable_web_page_preview=True
         )
@@ -95,7 +95,7 @@ async def save_media_in_channel(bot: Client, editable: Message, message: Message
             "Tap on the link to copy it",
             parse_mode="Markdown",
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton("Open Link", url=share_link)],
+                [[InlineKeyboardButton("Open Link", url=share_link)]
             ),
             disable_web_page_preview=True
         )
