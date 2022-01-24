@@ -13,9 +13,7 @@ async def reply_forward(message: Message, file_id: int):
         await message.reply_text(
             
             
-            f"👆",
-            disable_web_page_preview=True, quote=True)
-    except FloodWait as e:
+         
         await asyncio.sleep(e.x)
         await reply_forward(message, file_id)
 
