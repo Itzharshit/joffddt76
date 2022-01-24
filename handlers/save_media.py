@@ -50,15 +50,13 @@ async def save_batch_media_in_channel(bot: Client, editable: Message, message_id
                 InlineKeyboardButton("Delete Batch", callback_data="closeMessage")
             ]])
         )
-        share_link = f"https://t.me/{Config.BOT_USERNAME}?start=pyrogrammers_{str_to_b64(str(SaveMessage.message_id))}"
+        share_link = f"https://telegram.me/{Config.BOT_USERNAME}?start=pyrogrammers_{str_to_b64(str(SaveMessage.message_id))}"
         await editable.edit(
-            f"**Files are Stored in the Database!**\n\nHere is the Link of your files: {share_link} \n\n"
-            f"Open the link to get your files!",
+            f"**Your File is successfully stored in bot database!**\n\nHere is the shareable link of your file: {share_link} \n\n"
+            f"Tap on the link to copy it!",
             parse_mode="Markdown",
             reply_markup=InlineKeyboardMarkup(
                 [[InlineKeyboardButton("Open Link", url=share_link)],
-                 [InlineKeyboardButton("Updates Channel", url="https://t.me/pyrogrammers"),
-                  InlineKeyboardButton("Support Group", url="https://t.me/+7ScFy39Vckk5MWQ1")]]
             ),
             disable_web_page_preview=True
         )
@@ -90,16 +88,14 @@ async def save_media_in_channel(bot: Client, editable: Message, message: Message
         await forwarded_msg.reply_text(
             f"#PRIVATE_FILE:\n\n[{message.from_user.first_name}](tg://user?id={message.from_user.id}) Got File Link!",
             parse_mode="Markdown", disable_web_page_preview=True)
-        share_link = f"https://t.me/{Config.BOT_USERNAME}?start=pyrogrammers_{str_to_b64(file_er_id)}"
+        share_link = f"https://telegram.me/{Config.BOT_USERNAME}?start=pyrogrammers_{str_to_b64(file_er_id)}"
         await editable.edit(
-            "**File are Stored in Database!**\n\n"
-            f"Here is the Link of your file: {share_link} \n\n"
-            "Open the link to get file!",
+            "**Your File is successfully stored in bot database!**\n\n"
+            f"Here is the shareable link of your file: {share_link} \n\n"
+            "Tap on the link to copy it",
             parse_mode="Markdown",
             reply_markup=InlineKeyboardMarkup(
                 [[InlineKeyboardButton("Open Link", url=share_link)],
-                 [InlineKeyboardButton("Updates Channel", url="https://t.me/pyrogrammers"),
-                  InlineKeyboardButton("Support Group", url="https://t.me/+7ScFy39Vckk5MWQ1")]]
             ),
             disable_web_page_preview=True
         )
