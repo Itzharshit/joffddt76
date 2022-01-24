@@ -52,7 +52,7 @@ async def save_batch_media_in_channel(bot: Client, editable: Message, message_id
         )
         share_link = f"https://telegram.me/{Config.BOT_USERNAME}?start=pyrogrammers_{str_to_b64(str(SaveMessage.message_id))}"
         await editable.edit(
-            f"**Your File is successfully stored in bot database!**\n\nHere is the shareable link of your file: {share_link} \n\n"
+            f"**Your File is successfully stored in bot database!**\n\nHere is the shareable link of your file:\n`{share_link}` \n\n"
             f"Tap on the link to copy it!",
             parse_mode="Markdown",
             reply_markup=InlineKeyboardMarkup(
@@ -91,7 +91,7 @@ async def save_media_in_channel(bot: Client, editable: Message, message: Message
         share_link = f"https://telegram.me/{Config.BOT_USERNAME}?start=pyrogrammers_{str_to_b64(file_er_id)}"
         await editable.edit(
             "**Your File is successfully stored in bot database!**\n\n"
-            f"Here is the shareable link of your file: {share_link} \n\n"
+            f"Here is the shareable link of your file:\n`{share_link}` \n\n"
             "Tap on the link to copy it",
             parse_mode="Markdown",
             reply_markup=InlineKeyboardMarkup(
